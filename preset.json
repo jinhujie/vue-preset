@@ -1,0 +1,10 @@
+{
+  "plugins": {
+    "@vue/typescript": {
+      "prompts": false
+    },
+    "@vue/eslint": {
+      "prompts": false
+    }
+  }
+}
