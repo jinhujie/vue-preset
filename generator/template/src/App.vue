@@ -1,10 +1,14 @@
 <template>
-  <div>2021</div>
+  <simple></simple>
 </template>
 
 <script lang="ts">
-import "./index.less";
+import Simple from "@/view/simple.vue";
+// import "./index.less";
 
 export default {
-}
+  components: {
+    simple: Simple,
+  },
+};
 </script>

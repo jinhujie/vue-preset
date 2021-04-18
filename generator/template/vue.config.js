@@ -1,20 +1,29 @@
-const path = require('path');
-const resolve = dir => path.resolve(__dirname, dir);
+const {
+  REPO_NAME,
+  OUTPUT_EXTISION,
+  OUTPUT_TITLE,
+  PUBLIC_PATH,
+  VUE_APP_MOBILE,
+} = process.env;
 
-const argv = process.argv || [];
-const env_local = '--env_local';
-const env_local_index = argv.findIndex(arg => arg === env_local );
-const runningServerLocally = env_local_index !== -1;
+function generateFileNameWithDevice(repoName) {
+  if (VUE_APP_MOBILE) {
+    return repoName + "-m" + OUTPUT_EXTISION;
+  }
+  return repoName + OUTPUT_EXTISION;
+}
 
 module.exports = {
+  publicPath: PUBLIC_PATH,
   css: {
     // requireModuleExtension: false,
   },
-  chainWebpack: (config) => {
-    config.resolve.alias
-      .set('$src', resolve('src'))
-  },
   lintOnSave: true,
-  indexPath: "loldata.htm",
-  publicPath: runningServerLocally ? '' : "https://asset.tuwan.com/activity/lol-data/",
-}
+  pages: {
+    index: {
+      entry: "src/main.ts",
+      filename: generateFileNameWithDevice(REPO_NAME),
+      title: OUTPUT_TITLE,
+    },
+  },
+};
