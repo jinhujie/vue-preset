@@ -1,14 +1,13 @@
 <template>
-  <simple></simple>
+  <sample />
 </template>
 
 <script lang="ts">
-import Simple from "@/view/simple.vue";
-// import "./index.less";
+import Sample from "@/view/Sample.vue";
 
 export default {
   components: {
-    simple: Simple,
+    Sample,
   },
 };
 </script>

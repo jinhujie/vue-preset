@@ -11,7 +11,10 @@
       "config": "prettier",
       "lintOn": [
         "save"
-      ]
+      ],
+      "@vue/test-utils": {
+        "prompts": false
+      }
     }
   }
 }

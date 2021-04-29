@@ -1,5 +1,5 @@
 <template>
-  <div :class="className"></div>
+  <div :class="className">sample not simple</div>
 </template>
 
 <script lang="ts">
@@ -14,18 +14,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.home {
-  width: 100px;
-  height: 100px;
-  background: #eee;
-}
-</style>
-
-<style scoped>
-.home_m {
-  width: 20vh;
-  height: 20vh;
-  background: red;
-}
-</style>
+<style lang='less' src="./Sample.less" scoped />
