@@ -15,6 +15,12 @@
       "@vue/test-utils": {
         "prompts": false
       }
+    },
+    "@vue/cli-plugin-unit-jest": {
+      "prompts": false
+    },
+    "@vue/cli-plugin-babel": {
+      "prompts": false
     }
   }
 }

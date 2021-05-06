@@ -5,6 +5,7 @@
 <script lang="ts">
 import { defineComponent } from "vue";
 import { generateClassWithDevice } from "@/util/device";
+import Service from "@/service/service";
 
 export default defineComponent({
   setup() {
