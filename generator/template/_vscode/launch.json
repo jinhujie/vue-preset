@@ -1,0 +1,25 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+      {
+          "type": "chrome",
+          "request": "launch",
+          "name": "vuejs: chrome",
+          "url": "http://localhost:8080/template-cup-m.htm",
+          "webRoot":"${workspaceFolder}",
+          "breakOnLoad": true,
+          "skipFiles": [
+              "${workspaceFolder}/node_modules/**/*"
+          ],
+          "sourceMapPathOverrides": {
+            "webpack:///./*": "${webRoot}/*",
+            "webpack:/*": "${webRoot}/*",
+            "/./*": "${webRoot}/*",
+            "/src/*": "${webRoot}/*",
+            "webpack-vue:///*": "${webRoot}/*",
+            "/*": "*",
+            "/./~/*": "${webRoot}/node_modules/*"
+          },
+      }
+  ]
+}
