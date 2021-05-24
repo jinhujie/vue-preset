@@ -5,6 +5,7 @@ const {
   OUTPUT_EXTISION,
   OUTPUT_TITLE,
   PUBLIC_PATH,
+  VUE_APP_API,
 } = process.env;
 
 const publicPath = PUBLIC_PATH && ( PUBLIC_PATH + REPO_NAME );
@@ -61,7 +62,7 @@ function generateDevseverProxy () {
   const devServerProxy = {};
   ["activity/*", "match"].forEach((context) => {
     devServerProxy[context] = {
-        target: "http://yapi.tuwan.com",
+        target: VUE_APP_API,
         changeOrigin: true,
         secure: false,
         logLevel: "debug",
